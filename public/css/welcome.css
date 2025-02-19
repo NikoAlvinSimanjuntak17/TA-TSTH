@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+
+@keyframes kekanan {
+    0% {
+        opacity: 0;
+        transform: translateX(180px);
+    }
+}
+
+@keyframes kekiri {
+    0% {
+        opacity: 0;
+        transform: translateX(-360px);
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    font-family: "Dancing Script", cursive;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 9%;
+}
+
+body {
+    background-color: #000000;
+}
+
+.logo img {
+    margin-top: 20px;
+    width: 300px;
+    height: 76.1px;
+}
+
+#menu-icon {
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+#img-r {
+    right: 0;
+    top: 0;
+    height: 66em;
+    max-height: 100%;
+    position: fixed;
+    z-index: -100;
+    animation: kekanan 5s ease;
+}
+
+section {
+    padding: 15em 0em 5em 20em;
+}
+
+.text::after {
+    content: "Healthcare...";
+    background-color: black;
+}
+
+.text {
+    font-size: 4em;
+    padding-right: 5px;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+    font-family: "Secular One", sans-serif;
+    animation: typing 4s steps(30) infinite alternate, blink 1s infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0%;
+        visibility: hidden;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: black;
+    }
+}
+
+.hero-text p {
+    color: black;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    font-weight: Medium;
+    font-family: "sans-serif", Times, serif;
+}
+
+.ikon {
+    margin-bottom: 30px;
+    padding: 0px 20px;
+}
+
+.ikon img {
+    width: 60px;
+    height: 60px;
+}
+
+.ikon .hour {
+    margin-right: 40px;
+}
+
+.ikon .keranjang {
+    margin-right: 40px;
+}
+
+.hero-text a {
+    display: inline-block;
+    color: white;
+    background: #000000;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all 0.55s ease;
+    text-align: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.hero-text a:hover {
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(10px);
+}
+
+.hero-text a.register {
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+    width: 15em;
+    padding: 1.3em;
+}
+
+.hero-text a.login {
+    width: 10em;
+    padding: 1.3em;
+}
+
+.logo-snake {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    width: 12em;
+}
+
+.icons {
+    position: absolute;
+    top: 50%;
+    padding: 0 2%;
+    background-color: black;
+    transform: translateY(-50%);
+    line-height: 40px;
+    animation: kekiri 3s ease;
+}
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 30px;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 1500px) {
+    header {
+        padding: 15px 3%;
+        transition: 0.2s;
+    }
+
+    .icons {
+        padding: 0 3%;
+        transition: 0.2s;
+    }
+
+    #img-r {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1400px) {
+    section {
+        padding: 13em 0em 5em 10em;
+        transition: 0.2s;
+    }
+
+    #img-r {
+        width: auto;
+        height: 100%;
+    }
+
+    .container {
+        position: fixed;
+    }
+}
+
+@media (max-width: 1300px) {
+    #img-r {
+        width: auto;
+        height: 100%;
+    }
+
+    .text {
+        font-size: 3em;
+        margin: 0 0 30px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+
+    .container {
+        position: fixed;
+    }
+}
+
+@media (max-width: 1100px) {
+    .hero-text {
+        padding-top: 115px;
+    }
+
+    #img-r {
+        width: auto;
+        height: 100%;
+    }
+
+    .hero {
+        height: 100%;
+        gap: 1rem;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .text {
+        font-size: 2em;
+        margin: 0 0 30px;
+    }
+
+    .hero-text a.register {
+        width: 13em;
+        padding: 1.2em;
+    }
+
+    .hero-text a.login {
+        width: 8em;
+        padding: 1.3em;
+    }
+
+    .hero-text a {
+        transition: 0.2s;
+    }
+
+    section {
+        padding: 7em 0em 5em 10em;
+        transition: 0.2s;
+    }
+
+    .container {
+        position: fixed;
+    }
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 2em 0em 5em 4em;
+        transition: 0.2s;
+    }
+
+    .hero-text {
+        padding-top: 115px;
+    }
+
+    .logo img {
+        margin-top: 10px;
+        width: 200px;
+        height: 56.1px;
+        transition: 0.2s;
+    }
+
+    #img-r {
+        width: auto;
+        height: 100%;
+    }
+
+    .ikon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero {
+        height: 100%;
+        gap: 1rem;
+    }
+
+    .hero-text p {
+        font-size: 13px;
+    }
+
+    .text {
+        font-size: 2em;
+        margin: 0 0 30px;
+    }
+
+    .hero-text a {
+        font-size: 15px;
+    }
+
+    .icons {
+        line-height: 20px;
+        padding: 0 1%;
+    }
+
+    .icons i {
+        font-size: 20px;
+    }
+
+    .logo-snake {
+        top: 0;
+        width: 10em;
+        transition: 0.2s;
+    }
+
+    .container {
+        position: fixed;
+    }
+}
+
+@media (max-width: 500px) {
+    section {
+        padding: 2em 0em 1em 3em;
+    }
+
+    .logo img {
+        margin-top: 20px;
+        width: 200px;
+        height: 56.1px;
+        margin-bottom: 100px;
+    }
+
+    .ikon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .ikon .hour {
+        margin-right: 20px;
+    }
+
+    .ikon .keranjang {
+        margin-right: 20px;
+    }
+
+    .text {
+        font-size: 1.5em;
+        margin: 0 0 30px;
+    }
+
+    .hero-text p {
+        font-size: 0.8em;
+    }
+
+    .hero-text a.register {
+        width: 20em;
+        padding: 1.2em;
+    }
+
+    .hero-text a.login {
+        width: 12em;
+        padding: 1.3em;
+    }
+
+    .hero-text a {
+        line-height: 3em;
+        margin-bottom: 30em;
+        font-size: 0.5em;
+    }
+
+    .logo-snake {
+        width: 7em;
+    }
+
+    .container {
+        position: fixed;
+    }
+}
+
+@media (max-width: 450px) {
+    .text {
+        font-size: 1em;
+    }
+
+    .hero-text a {
+        font-size: 0.3em;
+    }
+}
+
+@media (max-width: 300px) {
+    #img-r {
+        background-image: none;
+    }
+}

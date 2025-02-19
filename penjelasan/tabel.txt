@@ -1,0 +1,54 @@
+name database wijayafarmadb
+id
+tabel product
+produk name - string
+produk price - int
+produk descriptsi - string
+produk count - int 
+produk img
+produk slug
+produk categori id (forenkey) contoh -> categori untuk batuk , flue , deman dll
+produk sub kategori  id( forenkey) contoh _> categori untuk sirup atau tablet
+
+tabel categori
+id
+categori name - string
+sub categori count 
+categori produk count 
+slug - string
+
+tabel subcategori
+id
+subcategori name - string
+categori id
+categori name 
+sub categori produk count - int
+slug - string
+
+tabel orders
+id
+produk name
+produk id
+produk quantity
+peoduk total price
+order status 
+order submision date
+
+tabel user
+username
+pasword
+email
+birth_date
+
+tabel role-users
+menentukan role nya admin atau user
+
+tabel penyakit 
+id penyakit
+nama penyakit
+deskripsi penyakit
+
+tabel about 
+id 
+nama about 
+deskripsi 
